@@ -3,6 +3,7 @@ A personal [Next.js](https://nextjs.org/) preconfigured starter template that co
 
 ## Table of contents
 1. [Features](#features)
+2. [Installation](#installation)
 2. [Usage & philosophy](#usage--philosophy)
     * [File structure and naming conventions](#file-structure-and-naming-conventions)
     * [Masterpages](#masterpages)
