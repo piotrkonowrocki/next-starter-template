@@ -1,0 +1,83 @@
+body {
+  font-size: $font-base-size;
+  font-family: $font-base-sans-serif;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: underline;
+  &:hover,
+  &:active {
+      text-decoration: none;
+  }
+}
+
+p {
+  margin: $font-base-size 0;
+  &:first-child {
+      margin-top: 0;
+  }
+  &:last-child {
+      margin-bottom: 0;
+  }
+}
+
+h1,
+.header-primary,
+h2,
+.header-secondary,
+h3,
+.header-tertiary,
+h4,
+.header-quaternary,
+h5,
+.header-quinary,
+h6,
+.header-senary {
+  font-weight: bold;
+  margin: ($font-base-size * 2) 0;
+  &:first-child {
+      margin-top: 0;
+  }
+  &:last-child {
+      margin-bottom: 0;
+  }
+  + h1,
+  + .header-primary,
+  + h2,
+  + .header-secondary,
+  + h3,
+  + .header-tertiary,
+  + h4,
+  + .header-quaternary,
+  + h5,
+  + .header-quinary,
+  + h6,
+  + .header-senary {
+    margin-top: -$font-base-size;
+  }
+}
+h1,
+.header-primary {
+  font-size: 2rem;
+}
+h2,
+.header-secondary {
+  font-size: 1.8rem;
+}
+h3,
+.header-tertiary {
+  font-size: 1.6rem;
+}
+h4,
+.header-quaternary {
+  font-size: 1.4rem;
+}
+h5,
+.header-quinary {
+  font-size: 1.2rem;
+}
+h6,
+.header-senary {
+  font-size: 1rem;
+}

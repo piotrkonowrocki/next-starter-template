@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
-import Footer from 'components/layout/footer';
-import Header from 'components/layout/header';
+import Footer from 'components/layout/footer/footer';
+import Header from 'components/layout/header/header';
 
 interface IDefaultMasterpageProps {
   children: React.ReactNode
@@ -10,7 +10,9 @@ interface IDefaultMasterpageProps {
 const DefaultMasterpage: FC<IDefaultMasterpageProps> = ({children}) => (
   <>
     <Header />
-    {children}
+    <main className="main-content">
+      {children}
+    </main>
     <Footer />
   </>
 );

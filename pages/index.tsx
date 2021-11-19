@@ -1,14 +1,15 @@
 import React from 'react';
-import type {NextPage} from 'next';
-// import Head from 'next/head';
-// import Image from 'next/image';
-// import styles from '../styles/Home.module.scss';
+import {NextPage} from 'next';
 
 import MasterPage from 'components/masterpages/masterpage';
 
 const Home: NextPage = () => {
   return (
-    <MasterPage cssClass="asd">
+    <MasterPage>
+      <h1>asdas</h1>
+      <h2>asdas</h2>
+      <p>lorem ipsum</p>
+      <p>lorem ipsum</p>
       <p>lorem ipsum</p>
     </MasterPage>
   );

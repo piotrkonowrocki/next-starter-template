@@ -1,5 +1,13 @@
 {
   "name": "next-starter-template",
+  "version": "1.0.0",
+  "description": "A Next.js preconfigured starter template",
+  "homepage": "https://github.com/piotrkonowrocki/next-starter-template#readme",
+  "bugs": {
+    "url": "https://github.com/piotrkonowrocki/next-starter-template/issues"
+  },
+  "license": "MIT",
+  "author": "Piotr Konowrocki",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +19,8 @@
     "classnames": "2.3.1",
     "next": "12.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sanitize.css": "^13.0.0"
   },
   "devDependencies": {
     "@types/node": "16.11.8",
