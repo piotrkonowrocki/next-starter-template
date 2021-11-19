@@ -578,7 +578,6 @@
     // plugin:react
     "react/display-name": 0,
     "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0,
 
     // plugin:react-hooks
     "react-hooks/exhaustive-deps": 0,
