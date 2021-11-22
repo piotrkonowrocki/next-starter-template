@@ -1,8 +1,10 @@
 import React, {VFC} from 'react';
 
+import styles from './footer.module.scss';
+
 const Footer: VFC = () => (
-  <footer className="main-footer">
-    example footer
+  <footer className={styles['main-footer']}>
+    Piotr Konowrocki 2021
   </footer>
 );
 

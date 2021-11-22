@@ -6,11 +6,23 @@ import MasterPage from 'components/masterpages/masterpage';
 const Home: NextPage = () => {
   return (
     <MasterPage>
-      <h1>asdas</h1>
-      <h2>asdas</h2>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
-      <p>lorem ipsum</p>
+      <p>Get started by editing <code>/pages/index.js</code></p>
+      <p>
+        Visit projects{' '}
+        <a href="https://github.com/piotrkonowrocki/next-starter-template" target="_blank" rel="noreferrer">Github page</a>{' '}
+        to learn more about this template.
+      </p>
+      <p>To learn more about Next.js, take a look at the following resources:</p>
+      <ul>
+        <li>
+          <a href="https://nextjs.org/docs" target="_blank" rel="noreferrer">{' '}
+          Next.js Documentation</a> - learn about Next.js features and API.
+        </li>
+        <li>
+          <a href="https://nextjs.org/learn" target="_blank" rel="noreferrer">{' '}
+          Learn Next.js</a> - an interactive Next.js tutorial.
+        </li>
+      </ul>
     </MasterPage>
   );
 };

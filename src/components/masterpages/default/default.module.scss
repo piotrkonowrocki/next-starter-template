@@ -1,0 +1,14 @@
+@import 'styles/utils/variables';
+
+.main-content {
+  /* Remove everything between those two comments as it's just a part of a demo page. */
+  margin: 0 auto;
+  max-width: 640px;
+  padding: 0 20px;
+  code {
+    background-color: rgba($color-primary, 0.15);
+    padding: 4px;
+    border-radius: 2px;
+  }
+  /* End of demo */
+}
