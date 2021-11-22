@@ -11,7 +11,7 @@ export const DemoHeader: VFC = () => (
       alt="Next.js logo"
     />
     <h1 className={styles['demo-title']}>
-      Welcome to <a href="https://nextjs.org">Next.js!</a>
+      Welcome to <a href="https://nextjs.org" target="_blank" rel="noreferrer">Next.js!</a>
     </h1>
   </div>
 );
@@ -27,9 +27,13 @@ export const DemoContent: VFC = () => (
     <p>
       Visit projects{' '}
       <a href="https://github.com/piotrkonowrocki/next-starter-template" target="_blank" rel="noreferrer">Github page</a>{' '}
-      to learn more about this template.
+      to find out more about this template.
     </p>
-    <p>To learn more about Next.js, take a look at the following resources:</p>
+    <p>
+      To learn more about{' '}
+      <a href="https://nextjs.org" target="_blank" rel="noreferrer">Next.js</a>,{' '}
+      take a look at the following resources:
+    </p>
     <ul>
       <li>
         <a href="https://nextjs.org/docs" target="_blank" rel="noreferrer">{' '}
