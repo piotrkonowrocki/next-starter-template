@@ -1,18 +1,10 @@
 import React, {VFC} from 'react';
-import Image from 'next/image';
 
-import nextJsLogo from 'assets/nextjs-logo.svg';
-import styles from './header.module.scss';
+import {DemoHeader} from 'components/ui/demo/demo';
 
 const Header: VFC = () => (
-  <header className={styles['main-header']}>
-    <Image
-      src={nextJsLogo}
-      alt="Next.js logo"
-    />
-    <h1>
-      Welcome to <a href="https://nextjs.org">Next.js!</a>
-    </h1>
+  <header className="main-header">
+    <DemoHeader />
   </header>
 );
 
