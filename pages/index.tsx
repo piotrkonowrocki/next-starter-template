@@ -6,7 +6,7 @@ import MasterPage from 'components/masterpages/masterpage';
 const Home: NextPage = () => {
   return (
     <MasterPage>
-      <p>Get started by editing <code>/pages/index.js</code></p>
+      <p>Get started by editing <code>/pages/index.tsx</code></p>
       <p>
         Visit projects{' '}
         <a href="https://github.com/piotrkonowrocki/next-starter-template" target="_blank" rel="noreferrer">Github page</a>{' '}
