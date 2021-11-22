@@ -1,6 +1,8 @@
 body {
-  font-size: $font-base-size;
-  font-family: $font-base-sans-serif;
+  font: {
+    size: $font-base-size;
+    family: $font-base-sans-serif;
+  }
   line-height: 1.25;
 }
 
@@ -8,55 +10,20 @@ a {
   text-decoration: underline;
   &:hover,
   &:active {
-      text-decoration: none;
+    text-decoration: none;
   }
 }
 
 p {
   margin: $font-base-size 0;
   &:first-child {
-      margin-top: 0;
+    margin-top: 0;
   }
   &:last-child {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
-h1,
-.header-primary,
-h2,
-.header-secondary,
-h3,
-.header-tertiary,
-h4,
-.header-quaternary,
-h5,
-.header-quinary,
-h6,
-.header-senary {
-  font-weight: bold;
-  margin: ($font-base-size * 2) 0;
-  &:first-child {
-      margin-top: 0;
-  }
-  &:last-child {
-      margin-bottom: 0;
-  }
-  + h1,
-  + .header-primary,
-  + h2,
-  + .header-secondary,
-  + h3,
-  + .header-tertiary,
-  + h4,
-  + .header-quaternary,
-  + h5,
-  + .header-quinary,
-  + h6,
-  + .header-senary {
-    margin-top: -$font-base-size;
-  }
-}
 h1,
 .header-primary {
   font-size: 2rem;
@@ -80,4 +47,40 @@ h5,
 h6,
 .header-senary {
   font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.header-primary,
+.header-secondary,
+.header-tertiary,
+.header-quaternary,
+.header-quinary,
+.header-senary {
+  font-weight: bold;
+  margin: ($font-base-size * 2) 0;
+  + h1,
+  + h2,
+  + h3,
+  + h4,
+  + h5,
+  + h6,
+  + .header-primary,
+  + .header-secondary,
+  + .header-tertiary,
+  + .header-quaternary,
+  + .header-quinary,
+  + .header-senary {
+    margin-top: -$font-base-size;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

@@ -5,6 +5,7 @@ A personal [Next.js](https://nextjs.org/) preconfigured starter template that co
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Usage & philosophy](#usage--philosophy)
+    * [Code style](#code-style)
     * [File structure and naming conventions](#file-structure-and-naming-conventions)
     * [Masterpages](#masterpages)
 
@@ -12,7 +13,8 @@ A personal [Next.js](https://nextjs.org/) preconfigured starter template that co
 This starter template comes with preinstalled and ready to use features:
 * [TypeScript](https://github.com/microsoft/TypeScript)
 * [Sass](https://github.com/sass/sass)
-* [sanitize.css](https://github.com/eslint/eslint) with custom configuration extending **next/core-web-vitals**, **plugin:react/recommended**, **plugin:react-hooks/recommended** and **plugin:@typescript-eslint/recommended**.
+* [eslint](https://github.com/eslint/eslint)
+* [stylelint](https://github.com/stylelint/stylelint)
 * [Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases)
 * [sanitize.css](https://github.com/csstools/sanitize.css)
 * [classnames](https://github.com/JedWatson/classnames)
@@ -32,7 +34,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying [`pages/index.tsx`](/pages/index.tsx). The page auto-updates as you edit the file.
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -47,6 +49,14 @@ npm run start
 
 
 ## Usage & philosophy
+
+### Code style
+This template uses both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) for subjective configuration code style validation.
+* [eslint](https://github.com/eslint/eslint) is set up at `7.32.0` version as [Next.js](https://nextjs.org/) doesn't work with 8.x.x,
+* [eslint](https://github.com/eslint/eslint) configuration is extending `next/core-web-vitals`, `plugin:react/recommended`, `plugin:react-hooks/recommended` and `plugin:@typescript-eslint/recommended`,
+* [stylelint](https://github.com/stylelint/stylelint) is set up at `14.1.0`,
+* [stylelint](https://github.com/stylelint/stylelint) configuration is extending `stylelint-config-standard`.
+
 
 ### File structure and naming conventions
 This template comes with basic folders structure and naming intention that can be changed and adjusted to your needs.
@@ -77,6 +87,6 @@ All files names except `components` and `styles` should be suffixed with file pu
 
 Eg.: see [`dictionaries/site.dictionary.ts`](src/dictionaries/site.dictionary.ts)
 ### Masterpages
-This template uses extended [Layout](https://nextjs.org/docs/basic-features/layouts) feature from Next.js.
+This template uses extended [Layout](https://nextjs.org/docs/basic-features/layouts) feature from [Next.js](https://nextjs.org/).
 
-To create new layout, create new directory inside `src/components/masterpages/` with new masterpage and include it into [`/src/components/masterpages/masterpage.tsx`](/src/components/masterpages/masterpage.tsx) as new type of template.
+To create new layout, create new directory inside [`/src/components/masterpages/`](/src/components/masterpages/)` with new masterpage and include it into [`/src/components/masterpages/masterpage.tsx`](/src/components/masterpages/masterpage.tsx) as new type of template.

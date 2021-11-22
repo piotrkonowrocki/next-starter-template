@@ -1,5 +1,3 @@
-// working with eslint@7.32.0 as nextjs doesn't work with 8.x.x
-
 {
   "env": {
     "browser": true,
