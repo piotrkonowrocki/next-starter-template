@@ -54,7 +54,7 @@ npm run start
 This template uses both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) for subjective configuration code style validation.
 * [eslint](https://github.com/eslint/eslint) is set up at `7.32.0` version as [Next.js](https://nextjs.org/) doesn't work with 8.x.x,
 * [eslint](https://github.com/eslint/eslint) configuration is extending `next/core-web-vitals`, `plugin:react/recommended`, `plugin:react-hooks/recommended` and `plugin:@typescript-eslint/recommended`,
-* [stylelint](https://github.com/stylelint/stylelint) is set up at `14.1.0`,
+* [stylelint](https://github.com/stylelint/stylelint) is set up at `14.1.0` version,
 * [stylelint](https://github.com/stylelint/stylelint) configuration is extending `stylelint-config-standard`.
 
 
@@ -89,4 +89,4 @@ Eg.: see [`dictionaries/site.dictionary.ts`](src/dictionaries/site.dictionary.ts
 ### Masterpages
 This template uses extended [Layout](https://nextjs.org/docs/basic-features/layouts) feature from [Next.js](https://nextjs.org/).
 
-To create new layout, create new directory inside [`/src/components/masterpages/`](/src/components/masterpages/)` with new masterpage and include it into [`/src/components/masterpages/masterpage.tsx`](/src/components/masterpages/masterpage.tsx) as new type of template.
+To create new layout, create new directory inside [`/src/components/masterpages/`](/src/components/masterpages/) with new masterpage and include it into [`/src/components/masterpages/masterpage.tsx`](/src/components/masterpages/masterpage.tsx) as new type of template.
