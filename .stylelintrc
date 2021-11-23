@@ -6,6 +6,7 @@
   "rules": {
     "selector-pseudo-class-no-unknown": null,
     "at-rule-no-unknown": null,
+    "no-descending-specificity": null,
 
     "alpha-value-notation": "number",
     "hue-degree-notation": "angle",
@@ -188,7 +189,7 @@
     "scss/at-import-partial-extension": "never",
     "scss/at-import-partial-extension-blacklist": null,
     "scss/at-import-partial-extension-whitelist": null,
-    "scss/at-mixin-argumentless-call-parentheses": "always",
+    "scss/at-mixin-argumentless-call-parentheses": "never",
     "scss/at-mixin-named-arguments": "never",
     "scss/at-mixin-parentheses-space-before": "always",
     "scss/at-mixin-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
