@@ -2,12 +2,16 @@
 A personal [Next.js](https://nextjs.org/) preconfigured starter template that could be used with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Table of contents
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Usage & philosophy](#usage--philosophy)
+1. [System Requirements](#system-requirements)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage & philosophy](#usage--philosophy)
     * [Code style](#code-style)
     * [File structure and naming conventions](#file-structure-and-naming-conventions)
     * [Masterpages](#masterpages)
+
+## System Requirements
+* Node.js 12.22.0 or later
 
 ## Features
 This starter template comes with preinstalled and ready to use features:
