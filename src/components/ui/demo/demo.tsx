@@ -1,10 +1,10 @@
-import React, {VFC} from 'react';
+import React, {FC} from 'react';
 import Image from 'next/image';
 
 import nextJsLogo from 'assets/nextjs-logo.svg';
 import styles from './demo.module.scss';
 
-export const DemoHeader: VFC = () => (
+export const DemoHeader: FC = () => (
   <div className={`${styles['demo-container']} ${styles['demo-container--header']}`}>
     <Image
       src={nextJsLogo}
@@ -16,7 +16,7 @@ export const DemoHeader: VFC = () => (
   </div>
 );
 
-export const DemoContent: VFC = () => (
+export const DemoContent: FC = () => (
   <div className={styles['demo-container']}>
     <p>Get started by editing <code className={styles['demo-code']}>/pages/index.tsx</code></p>
     <p>
@@ -47,8 +47,8 @@ export const DemoContent: VFC = () => (
   </div>
 );
 
-export const DemoFooter: VFC = () => (
+export const DemoFooter: FC = () => (
   <div className={`${styles['demo-container']} ${styles['demo-container--footer']}`}>
-    Piotr Konowrocki 2021
+    Piotr Konowrocki 2021 - {new Date().getFullYear()}
   </div>
 );

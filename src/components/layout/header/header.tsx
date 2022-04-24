@@ -1,8 +1,8 @@
-import React, {VFC} from 'react';
+import React, {FC} from 'react';
 
 import {DemoHeader} from 'components/ui/demo/demo';
 
-const Header: VFC = () => (
+const Header: FC = () => (
   <header className="main-header">
     <DemoHeader />
   </header>

@@ -257,6 +257,7 @@
     "prefer-exponentiation-operator": 2,
     "prefer-named-capture-group": 0,
     "prefer-numeric-literals": 0,
+    "prefer-object-has-own": 2,
     "prefer-object-spread": 2,
     "prefer-promise-reject-errors": 0,
     "prefer-regex-literals": 2,
