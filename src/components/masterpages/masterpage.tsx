@@ -1,9 +1,9 @@
-import React, {FC, ReactNode, useEffect} from 'react';
-import Head from 'next/head';
+import React, {FC, ReactNode, useEffect} from 'react'
+import Head from 'next/head'
 
-import {siteName} from 'dictionaries/site.dictionary';
-import DefaultMasterpage from './default/default.';
-import EmptyMasterpage from './empty/empty';
+import {siteName} from 'dictionaries/site.dictionary'
+import DefaultMasterpage from './default/default.'
+import EmptyMasterpage from './empty/empty'
 
 interface IMasterPageProps {
   template?: 'default' | 'empty'
@@ -15,12 +15,12 @@ interface IMasterPageProps {
 
 const MasterPage: FC<IMasterPageProps> = ({template = 'default', title = siteName, subtitle, bodyClassName, children}) => {
   useEffect(() => {
-    if (bodyClassName) document.querySelector('body')?.classList.add(bodyClassName);
+    if (bodyClassName) document.querySelector('body')?.classList.add(bodyClassName)
 
     return () => {
-      if (bodyClassName) document.querySelector('body')?.classList.remove(bodyClassName);
-    };
-  }, [bodyClassName]);
+      if (bodyClassName) document.querySelector('body')?.classList.remove(bodyClassName)
+    }
+  }, [bodyClassName])
 
   return (
     <>
@@ -36,11 +36,11 @@ const MasterPage: FC<IMasterPageProps> = ({template = 'default', title = siteNam
       {
         {
           default: <DefaultMasterpage>{children}</DefaultMasterpage>,
-          empty: <EmptyMasterpage>{children}</EmptyMasterpage>
+          empty: <EmptyMasterpage>{children}</EmptyMasterpage>,
         }[template]
       }
     </>
-  );
-};
+  )
+}
 
-export default MasterPage;
+export default MasterPage

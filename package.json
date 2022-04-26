@@ -1,6 +1,6 @@
 {
   "name": "next-starter-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Next.js preconfigured starter template",
   "homepage": "https://github.com/piotrkonowrocki/next-starter-template#readme",
   "bugs": {
@@ -17,7 +17,9 @@
   },
   "dependencies": {
     "classnames": "2.3.1",
+    "eslint-plugin-prettier": "4.0.0",
     "next": "12.1.5",
+    "prettier": "2.6.2",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "sanitize.css": "13.0.0"

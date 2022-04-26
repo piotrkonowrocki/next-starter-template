@@ -19,6 +19,7 @@ This starter template comes with preinstalled and ready to use features:
 * [Sass](https://github.com/sass/sass)
 * [eslint](https://github.com/eslint/eslint)
 * [stylelint](https://github.com/stylelint/stylelint)
+* [prettier](https://github.com/prettier/prettier)
 * [Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases)
 * [sanitize.css](https://github.com/csstools/sanitize.css)
 * [classnames](https://github.com/JedWatson/classnames)
@@ -56,9 +57,10 @@ npm run start
 
 ### Code style
 This template uses both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) for subjective configuration code style validation.
-* [eslint](https://github.com/eslint/eslint) is set up at `7.32.0` version as [Next.js](https://nextjs.org/) doesn't work with 8.x.x,
+* [eslint](https://github.com/eslint/eslint) is set up at `8.14.0` version,
 * [eslint](https://github.com/eslint/eslint) configuration is extending `next/core-web-vitals`, `plugin:react/recommended`, `plugin:react-hooks/recommended` and `plugin:@typescript-eslint/recommended`,
-* [stylelint](https://github.com/stylelint/stylelint) is set up at `14.1.0` version,
+* [eslint](https://github.com/eslint/eslint) is using `prettier/prettier` plugin to display `prettier` deviations as errors,
+* [stylelint](https://github.com/stylelint/stylelint) is set up at `14.7.0` version,
 * [stylelint](https://github.com/stylelint/stylelint) configuration is extending `stylelint-config-standard`.
 
 

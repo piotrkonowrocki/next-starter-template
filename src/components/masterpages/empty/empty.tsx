@@ -1,13 +1,11 @@
-import React, {FC} from 'react';
+import React, {FC} from 'react'
 
 interface IEmptyMasterpageProps {
   children: React.ReactNode
 }
 
-const EmptyMasterpage: FC<IEmptyMasterpageProps> = ({children}) => (
-  <>
-    {children}
-  </>
-);
+const EmptyMasterpage: FC<IEmptyMasterpageProps> = ({children}) => {
+  return <>{children}</>
+}
 
-export default EmptyMasterpage;
+export default EmptyMasterpage
