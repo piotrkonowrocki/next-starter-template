@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: npm dependencies
+        run: yarn --pure-lockfile --non-interactive
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: css
+        run: yarn test:css
+
+      - name: js
+        run: yarn test:js
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: next build
+        run: yarn build
