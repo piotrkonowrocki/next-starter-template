@@ -23,6 +23,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: css
+        uses: actions-hub/stylelint@master
         run: yarn test:css
 
       - name: js
