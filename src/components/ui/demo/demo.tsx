@@ -1,7 +1,8 @@
 import React, {FC} from 'react'
 import Image from 'next/image'
 
-import nextJsLogo from 'assets/nextjs-logo.svg'
+import nextJsLogo from '@/assets/nextjs-logo.svg'
+
 import styles from './demo.module.scss'
 
 export const DemoHeader: FC = () => (

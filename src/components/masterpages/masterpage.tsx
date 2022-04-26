@@ -1,7 +1,8 @@
 import React, {FC, ReactNode, useEffect} from 'react'
 import Head from 'next/head'
 
-import {siteName} from 'dictionaries/site.dictionary'
+import {siteName} from '@/dictionaries/site.dictionary'
+
 import DefaultMasterpage from './default/default.'
 import EmptyMasterpage from './empty/empty'
 

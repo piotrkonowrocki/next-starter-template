@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 
-import Footer from 'components/layout/footer/footer'
-import Header from 'components/layout/header/header'
+import Footer from '@/components/layout/footer/footer'
+import Header from '@/components/layout/header/header'
 
 interface IDefaultMasterpageProps {
   children: React.ReactNode

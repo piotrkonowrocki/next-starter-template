@@ -59,13 +59,16 @@ npm run start
 This template uses both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) for subjective configuration code style validation.
 * [eslint](https://github.com/eslint/eslint) is set up at `8.14.0` version,
 * [eslint](https://github.com/eslint/eslint) configuration is extending `next/core-web-vitals`, `plugin:react/recommended`, `plugin:react-hooks/recommended` and `plugin:@typescript-eslint/recommended`,
+* [eslint](https://github.com/eslint/eslint) is using [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) plugin for auto sort imports,
 * [stylelint](https://github.com/stylelint/stylelint) is set up at `14.7.0` version,
 * [stylelint](https://github.com/stylelint/stylelint) configuration is extending `stylelint-config-standard`,
-* both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) are using `prettier` plugin to display `prettier` deviations as errors.
+* both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) are using `prettier` plugins to display `prettier` deviations as errors.
 
 
 ### File structure and naming conventions
 This template comes with basic folders structure and naming intention that can be changed and adjusted to your needs.
+
+In imports, alias `@/` is used to reach `src/` directory. This allows to easly distinguish internal packages from npm and also is important for import sorting.
 
 Starting structure includes:
 ```
