@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import {siteName} from '@/dictionaries/site.dictionary'
 
-import DefaultMasterpage from './default/default.'
+import DefaultMasterpage from './default/default'
 import EmptyMasterpage from './empty/empty'
 
 interface IMasterPageProps {
