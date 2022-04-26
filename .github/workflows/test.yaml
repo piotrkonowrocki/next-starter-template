@@ -20,10 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions-hub/stylelint@master
 
       - name: css
-        uses: actions-hub/stylelint@master
         run: yarn test:css
 
       - name: js
