@@ -1,7 +1,8 @@
 {
   "extends": "stylelint-config-standard",
   "plugins": [
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-prettier"
   ],
   "rules": {
     "selector-pseudo-class-no-unknown": null,
@@ -239,6 +240,7 @@
     "scss/no-dollar-variables": null,
     "scss/no-duplicate-dollar-variables": true,
     "scss/no-duplicate-mixins": true,
-    "scss/no-global-function-names": true
+    "scss/no-global-function-names": true,
+    "prettier/prettier": true
   }
 }

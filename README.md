@@ -59,9 +59,9 @@ npm run start
 This template uses both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) for subjective configuration code style validation.
 * [eslint](https://github.com/eslint/eslint) is set up at `8.14.0` version,
 * [eslint](https://github.com/eslint/eslint) configuration is extending `next/core-web-vitals`, `plugin:react/recommended`, `plugin:react-hooks/recommended` and `plugin:@typescript-eslint/recommended`,
-* [eslint](https://github.com/eslint/eslint) is using `prettier/prettier` plugin to display `prettier` deviations as errors,
 * [stylelint](https://github.com/stylelint/stylelint) is set up at `14.7.0` version,
-* [stylelint](https://github.com/stylelint/stylelint) configuration is extending `stylelint-config-standard`.
+* [stylelint](https://github.com/stylelint/stylelint) configuration is extending `stylelint-config-standard`,
+* both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) are using `prettier` plugin to display `prettier` deviations as errors.
 
 
 ### File structure and naming conventions
