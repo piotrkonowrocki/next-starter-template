@@ -1,5 +1,4 @@
 {
-  "extends": "stylelint-config-standard",
   "plugins": [
     "stylelint-scss",
     "stylelint-prettier"
@@ -34,7 +33,6 @@
     "property-no-vendor-prefix": null,
     "declaration-block-no-redundant-longhand-properties": true,
     "declaration-no-important": true,
-    "declaration-property-max-values": null,
     "declaration-property-unit-allowed-list": null,
     "declaration-property-unit-disallowed-list": null,
     "declaration-property-value-allowed-list": null,
@@ -61,7 +59,6 @@
     "selector-nested-pattern": null,
     "selector-no-qualifying-type": null,
     "selector-no-vendor-prefix": true,
-    "selector-not-notation": "complex",
     "selector-pseudo-class-allowed-list": null,
     "selector-pseudo-class-disallowed-list": null,
     "selector-pseudo-element-allowed-list": null,
