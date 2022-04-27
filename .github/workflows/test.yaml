@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: react-github-actions-build
-          path: install
+          path: node_modules
 
   test:
     runs-on: ubuntu-latest
