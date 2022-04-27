@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: test
+name: Test
 
 on:
   push:
@@ -16,16 +16,28 @@ jobs:
       - name: npm dependencies
         run: yarn --pure-lockfile --non-interactive
 
+      - name: Share artifact inside workflow
+        uses: actions/upload-artifact@v1
+        with:
+          name: react-github-actions-build
+          path: install
+
   test:
     runs-on: ubuntu-latest
+    needs: install
 
     steps:
-      - uses: actions-hub/stylelint@master
+      - uses: actions/checkout@v3
 
-      - name: css
+      - name: Get artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: react-github-actions-build
+
+      - name: Test css
         run: yarn test:css
 
-      - name: js
+      - name: Test js
         run: yarn test:js
 
   build:
