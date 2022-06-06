@@ -66,6 +66,9 @@ export const DemoContent: FC = () => (
 
 export const DemoFooter: FC = () => (
   <div css={[containerStyles, {marginTop: 64, paddingTop: 32, textAlign: 'center', borderTop: `1px solid ${theme.color.primary}`}]}>
-    {process.env.NEXT_PUBLIC_APP_AUTHOR_NAME} 2021 - {new Date().getFullYear()} - v.{process.env.NEXT_PUBLIC_APP_VERSION}
+    <p css={{margin: 0, fontSize: '0.75rem'}}>
+      {process.env.NEXT_PUBLIC_APP_AUTHOR_NAME} &bull; {process.env.NEXT_PUBLIC_APP_NAME} v.{process.env.NEXT_PUBLIC_APP_VERSION} &bull;
+      2021 - {new Date().getFullYear()}
+    </p>
   </div>
 )
