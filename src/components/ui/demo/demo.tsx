@@ -59,6 +59,6 @@ export const DemoContent: FC = () => (
 
 export const DemoFooter: FC = () => (
   <div className={`${styles['demo-container']} ${styles['demo-container--footer']}`}>
-    Piotr Konowrocki 2021 - {new Date().getFullYear()}
+    {process.env.NEXT_PUBLIC_APP_AUTHOR_NAME} 2021 - {new Date().getFullYear()} - v.{process.env.NEXT_PUBLIC_APP_VERSION}
   </div>
 )

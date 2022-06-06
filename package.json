@@ -7,7 +7,10 @@
     "url": "https://github.com/piotrkonowrocki/next-starter-template/issues"
   },
   "license": "MIT",
-  "author": "Piotr Konowrocki",
+  "author": {
+    "name": "Piotr Konowrocki",
+    "url": "https://github.com/piotrkonowrocki/"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
