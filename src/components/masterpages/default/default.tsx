@@ -10,7 +10,7 @@ interface IDefaultMasterpageProps {
 const DefaultMasterpage: FC<IDefaultMasterpageProps> = ({children}) => (
   <>
     <Header />
-    <main className="main-content">{children}</main>
+    <main>{children}</main>
     <Footer />
   </>
 )

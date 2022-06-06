@@ -1,14 +1,21 @@
 import React, {FC} from 'react'
+import {CSSObject} from '@emotion/react'
 import Image from 'next/image'
 
 import nextJsLogo from '@/assets/nextjs-logo.svg'
+import {theme} from '@/styles/theme'
+import {rgba} from '@/utils/rgba'
 
-import styles from './demo.module.scss'
+const containerStyles: CSSObject = {
+  maxWidth: 640,
+  margin: '0 auto',
+  padding: '0 20px',
+}
 
 export const DemoHeader: FC = () => (
-  <div className={`${styles['demo-container']} ${styles['demo-container--header']}`}>
+  <div css={[containerStyles, {paddingTop: 64, paddingBottom: 48, textAlign: 'center'}]}>
     <Image src={nextJsLogo} alt="Next.js logo" />
-    <h1 className={styles['demo-title']}>
+    <h1 css={{margin: '32px 0 0', fontSize: '3rem'}}>
       Welcome to{' '}
       <a href="https://nextjs.org" target="_blank" rel="noreferrer">
         Next.js!
@@ -18,13 +25,13 @@ export const DemoHeader: FC = () => (
 )
 
 export const DemoContent: FC = () => (
-  <div className={styles['demo-container']}>
+  <div css={[containerStyles, {code: {padding: 2, backgroundColor: rgba(theme.color.primary, 0.15), borderRadius: 2}}]}>
     <p>
-      Get started by editing <code className={styles['demo-code']}>/pages/index.tsx</code>
+      Get started by editing <code>/pages/index.tsx</code>
     </p>
     <p>
-      Start developing your own website with deleting files associated with demo component in{' '}
-      <code className={styles['demo-code']}>/src/components/ui/demo/</code> directory.
+      Start developing your own website with deleting files associated with demo component in <code>/src/components/ui/demo/</code>{' '}
+      directory.
     </p>
     <p>
       Visit projects{' '}
@@ -58,7 +65,7 @@ export const DemoContent: FC = () => (
 )
 
 export const DemoFooter: FC = () => (
-  <div className={`${styles['demo-container']} ${styles['demo-container--footer']}`}>
+  <div css={[containerStyles, {marginTop: 64, paddingTop: 32, textAlign: 'center', borderTop: `1px solid ${theme.color.primary}`}]}>
     {process.env.NEXT_PUBLIC_APP_AUTHOR_NAME} 2021 - {new Date().getFullYear()} - v.{process.env.NEXT_PUBLIC_APP_VERSION}
   </div>
 )

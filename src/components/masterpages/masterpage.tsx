@@ -1,4 +1,5 @@
-import React, {FC, ReactNode, useEffect} from 'react'
+import React, {FC, ReactNode} from 'react'
+import {CSSObject, Global} from '@emotion/react'
 import Head from 'next/head'
 
 import {siteName} from '@/dictionaries/site.dictionary'
@@ -10,19 +11,11 @@ interface IMasterPageProps {
   template?: 'default' | 'empty'
   title?: string
   subtitle?: string | string[]
-  bodyClassName?: string
+  bodyCss?: CSSObject
   children: ReactNode
 }
 
-const MasterPage: FC<IMasterPageProps> = ({template = 'default', title = siteName, subtitle, bodyClassName, children}) => {
-  useEffect(() => {
-    if (bodyClassName) document.querySelector('body')?.classList.add(bodyClassName)
-
-    return () => {
-      if (bodyClassName) document.querySelector('body')?.classList.remove(bodyClassName)
-    }
-  }, [bodyClassName])
-
+const MasterPage: FC<IMasterPageProps> = ({template = 'default', title = siteName, subtitle, bodyCss, children}) => {
   return (
     <>
       <Head>
@@ -34,6 +27,7 @@ const MasterPage: FC<IMasterPageProps> = ({template = 'default', title = siteNam
         <link rel="icon" href="/favicon.ico" />
         {/* Generate your complete favicon using https://realfavicongenerator.net/ */}
       </Head>
+      <Global styles={{body: bodyCss}} />
       {
         {
           default: <DefaultMasterpage>{children}</DefaultMasterpage>,
