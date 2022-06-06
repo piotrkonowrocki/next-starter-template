@@ -15,18 +15,18 @@ A personal [Next.js](https://nextjs.org/) preconfigured starter template that co
 
 ## Features
 This starter template comes with preinstalled and ready to use features:
-* [TypeScript](https://github.com/microsoft/TypeScript)
-* [Sass](https://github.com/sass/sass)
-* [eslint](https://github.com/eslint/eslint)
-* [stylelint](https://github.com/stylelint/stylelint)
-* [prettier](https://github.com/prettier/prettier)
-* [Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases)
-* [sanitize.css](https://github.com/csstools/sanitize.css)
-* [classnames](https://github.com/JedWatson/classnames)
+* [TypeScript](https://github.com/microsoft/TypeScript),
+* [Emotion](https://github.com/emotion-js/emotion) as default method of styling,
+* [sanitize.css](https://github.com/csstools/sanitize.css) for basic styles normalization,
+* [facepaint](https://github.com/emotion-js/facepaint) for handling media queries,
+* Both [eslint](https://github.com/eslint/eslint) and [prettier](https://github.com/prettier/prettier) for code quality,
+* [Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases) with `@/` as prefix for all `/src` based files.
 
 ## Installation
 To get started, use the following command:
 ```bash
+yarn create next-app --example https://github.com/piotrkonowrocki/next-starter-template
+# or
 npx create-next-app --example https://github.com/piotrkonowrocki/next-starter-template
 ```
 
@@ -34,6 +34,8 @@ Inside your newly created app, you can run several commands.
 
 To start development server use
 ```bash
+yarn dev
+# or
 npm run dev
 ```
 
@@ -48,22 +50,24 @@ To learn more about Next.js, take a look at the following resources:
 
 To build app and run it production mode use
 ```bash
+yarn build
+yarn start
+# or
 npm run build
 npm run start
 ```
 
-
 ## Usage & philosophy
 
 ### Code style
-This template uses both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) for subjective configuration code style validation.
-* [eslint](https://github.com/eslint/eslint) is set up at `8.14.0` version,
-* [eslint](https://github.com/eslint/eslint) configuration is extending `next/core-web-vitals`, `plugin:react/recommended`, `plugin:react-hooks/recommended` and `plugin:@typescript-eslint/recommended`,
+This template uses both [eslint](https://github.com/eslint/eslint) and [prettier](https://github.com/prettier/prettier) for subjective configuration code style validation.
+* [eslint](https://github.com/eslint/eslint) configuration is using `react`, `react-hooks`, `prettier` and `simple-import-sort` plugins,
+* [eslint](https://github.com/eslint/eslint) configuration is extending `eslint:recommended`, `plugin:react/recommended`, `plugin:react-hooks/recommended`, `plugin:@typescript-eslint/recommended`, `next/core-web-vitals`,
 * [eslint](https://github.com/eslint/eslint) is using [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) plugin for auto sort imports,
-* [stylelint](https://github.com/stylelint/stylelint) is set up at `14.7.0` version,
-* [stylelint](https://github.com/stylelint/stylelint) configuration is extending `stylelint-config-standard`,
-* both [eslint](https://github.com/eslint/eslint) and [stylelint](https://github.com/stylelint/stylelint) are using `prettier` plugins to display `prettier` deviations as errors.
+* all deviations from [prettier](https://github.com/prettier/prettier) are displayed as errors in [eslint](https://github.com/eslint/eslint).
 
+### Styling
+This template uses [Emotion](https://github.com/emotion-js/emotion) as styling library. All global styles are stored in [`styles`](src/styles/) directory and can be included in application via [`_app.tsx`](pages/_app.tsx) file.
 
 ### File structure and naming conventions
 This template comes with basic folders structure and naming intention that can be changed and adjusted to your needs.
@@ -82,19 +86,16 @@ Starting structure includes:
     │   └── ui
     ├── dictionaries
     ├── styles
-    │   ├── base
-    │   ├── layout
-    │   └── utils
     ├── types
     └── utils
 ```
 This is just a base structure, during your development you will need to add more top level directories like `api`, `contexts` or `hooks`.
 
-Top level directories should be used only to store files used in between more than one component. Any `styles`, `utils` files etc., that belongs only to only one component should be placed in the same directory, as this component.
+Top level directories should be used only to store files used in between more than one component. Any `types`, `utils` files etc., that belongs only to only one component should be placed in the same directory, as this component.
 
-All files names except `components` and `styles` should be suffixed with file purpose before file extension.
+All files names except `components` should be suffixed with file purpose before file extension.
 
-Eg.: see [`dictionaries/site.dictionary.ts`](src/dictionaries/site.dictionary.ts)
+E.g.: see [`dictionaries/site.dictionary.ts`](src/dictionaries/site.dictionary.ts)
 ### Masterpages
 This template uses extended [Layout](https://nextjs.org/docs/basic-features/layouts) feature from [Next.js](https://nextjs.org/).
 
