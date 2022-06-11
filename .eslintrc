@@ -196,7 +196,7 @@
     //* plugin:react-hooks */
     "react-hooks/exhaustive-deps": 0,
 
-    // plugin:@typescript-eslint
+    // plugin:@typescript-eslint */
     "@typescript-eslint/array-type": 2,
     "@typescript-eslint/no-unused-vars": 2,
     "@typescript-eslint/consistent-indexed-object-style": [2, "index-signature"],
