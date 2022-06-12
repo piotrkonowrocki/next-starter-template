@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import nextJsLogo from '@/assets/nextjs-logo.svg'
 import {Boilerplate} from '@/effortless-ui/components'
-import {theme} from '@/styles/theme'
+import {mediaQuery, theme} from '@/styles/theme'
 import {rgba} from '@/utils/rgba'
 
 const containerStyles: CSSObject = {
@@ -33,12 +33,27 @@ export const DemoContent: FC = () => {
       <Boilerplate
         ref={ref}
         as="div"
-        cs={{
-          m: 10,
-          background: 'red',
-        }}
+        cs={[
+          {
+            bc: 'red',
+          },
+          {
+            color: 'blue',
+          },
+          [
+            {
+              pt: 10,
+            },
+            {
+              pb: 10,
+            },
+          ],
+          mediaQuery({
+            m: [100, null, 0],
+          }),
+        ]}
         onClick={() => {
-          console.log(ref)
+          // console.log(ref)
         }}
       >
         Boilerplate

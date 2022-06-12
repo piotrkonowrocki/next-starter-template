@@ -1,25 +1,24 @@
 import {CSSObject} from '@emotion/react'
-import * as CSS from 'csstype'
+import {Properties} from 'csstype'
+import {DynamicStyle} from 'facepaint'
 
-type CSSProperties = CSS.Properties<number | string>
-
-export interface CsAliases {
-  bg?: CSSProperties['background']
-  bc?: CSSProperties['backgroundColor']
-  m?: CSSProperties['margin']
-  mx?: CSSProperties['marginRight']
-  my?: CSSProperties['marginTop']
-  mt?: CSSProperties['marginTop']
-  mr?: CSSProperties['marginRight']
-  mb?: CSSProperties['marginBottom']
-  ml?: CSSProperties['marginLeft']
-  p?: CSSProperties['padding']
-  px?: CSSProperties['paddingRight']
-  py?: CSSProperties['paddingTop']
-  pt?: CSSProperties['paddingTop']
-  pr?: CSSProperties['paddingRight']
-  pb?: CSSProperties['paddingBottom']
-  pl?: CSSProperties['paddingLeft']
+export interface CSAliases {
+  bg: Properties['background']
+  bc: Properties['backgroundColor']
+  m: Properties['margin']
+  mx: Properties['marginRight']
+  my: Properties['marginTop']
+  mt: Properties['marginTop']
+  mr: Properties['marginRight']
+  mb: Properties['marginBottom']
+  ml: Properties['marginLeft']
+  p: Properties['padding']
+  px: Properties['paddingRight']
+  py: Properties['paddingTop']
+  pt: Properties['paddingTop']
+  pr: Properties['paddingRight']
+  pb: Properties['paddingBottom']
+  pl: Properties['paddingLeft']
 }
 
-export type CsObject = CSSObject | CsAliases
+export type CSObject = (CSSObject | DynamicStyle | Partial<CSAliases>) | CSObject[]
