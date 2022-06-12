@@ -3,7 +3,7 @@ import {CSSObject} from '@emotion/react'
 import {CSAliases, CSObject} from '@/effortless-ui/types'
 import {transformCSValue} from '@/effortless-ui/utils'
 
-export const transformCSProperty = (cs: CSObject): CSObject => {
+export const transformCSProperty = (cs: CSObject = {}): CSObject => {
   if (Array.isArray(cs)) {
     return cs.map((item) => {
       return transformCSProperty(item)
