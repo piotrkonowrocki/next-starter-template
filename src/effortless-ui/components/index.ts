@@ -1,2 +1,2 @@
-export * from './boilerplate'
+export * from './box'
 export * from './text'

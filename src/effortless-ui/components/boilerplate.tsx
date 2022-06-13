@@ -15,13 +15,15 @@ export type TBoilerplateProps = Omit<Assign<ComponentPropsWithRef<'div'>, IBoile
 
 export const Boilerplate = forwardRef<unknown, TBoilerplateProps>((props, ref) => {
   const {theme} = useEffortlessTheme()
+
   const {tag = 'div', cs, from, ...rest} = props
   const Component = tag
-  const styles = []
+
+  const styles: CSObject[] = []
   const themeTag = tag as keyof JSX.IntrinsicElements
 
   if (cs) styles.push(transformCSProperty(cs))
-  if (from && theme?.[from]?.[themeTag]) styles.push(transformCSProperty(theme[from]?.[themeTag]))
+  if (from && theme?.variants?.[from]?.[themeTag]) styles.push(transformCSProperty(theme.variants[from]?.[themeTag]))
 
   const allProps = {
     ref,

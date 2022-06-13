@@ -3,7 +3,7 @@ import {CSSObject} from '@emotion/react'
 import Image from 'next/image'
 
 import nextJsLogo from '@/assets/nextjs-logo.svg'
-import {Boilerplate, Text} from '@/effortless-ui/components'
+import {Box, Text} from '@/effortless-ui/components'
 import {mediaQuery, theme} from '@/styles/theme'
 import {rgba} from '@/utils/rgba'
 
@@ -30,9 +30,10 @@ export const DemoContent: FC = () => {
 
   return (
     <div css={[containerStyles, {code: {padding: 2, backgroundColor: rgba(theme.color.primary, 0.15), borderRadius: 2}}]}>
-      <Boilerplate
+      <Box
         ref={ref}
         tag="footer"
+        composition="flex"
         cs={[
           {
             bc: 'red',
@@ -56,8 +57,13 @@ export const DemoContent: FC = () => {
           // console.log(ref)
         }}
       >
-        Boilerplate
-      </Boilerplate>
+        Box
+      </Box>
+      <Box tag="ul" composition="list">
+        <Box tag="li">1</Box>
+        <Box tag="li">2</Box>
+        <Box tag="li">3</Box>
+      </Box>
       <Text>Text component</Text>
       <p>
         Get started by editing <code>/pages/index.tsx</code>
