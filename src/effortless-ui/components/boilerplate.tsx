@@ -19,12 +19,11 @@ export const Boilerplate = forwardRef<unknown, TBoilerplateProps>((props, ref) =
   const {tag = 'div', cs, from, ...rest} = props
   const Component = tag
 
-  const styles: CSObject[] = []
   const themeTag = tag as keyof JSX.IntrinsicElements
-
-  if (cs) styles.push(transformCSProperty(cs))
-  if (from && theme?.variants?.[from]?.[themeTag]) styles.push(transformCSProperty(theme.variants[from]?.[themeTag]))
-
+  const styles: CSObject[] = [
+    ...(from && theme?.variants?.[from]?.[themeTag] ? [transformCSProperty(theme.variants[from]?.[themeTag])] : []),
+    ...(cs ? [transformCSProperty(cs)] : []),
+  ]
   const allProps = {
     ref,
     ...(styles.length && {css: css(styles)}),
