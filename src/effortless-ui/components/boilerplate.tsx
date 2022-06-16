@@ -9,6 +9,7 @@ interface IBoilerplateProps {
   cs?: CSObject
   from?: EffortlessThemeComponentsTypes
   tag?: ElementType
+  variant?: string
 }
 
 export type TBoilerplateProps = Omit<Assign<ComponentPropsWithRef<'div'>, IBoilerplateProps>, 'ref'>
@@ -16,12 +17,13 @@ export type TBoilerplateProps = Omit<Assign<ComponentPropsWithRef<'div'>, IBoile
 export const Boilerplate = forwardRef<unknown, TBoilerplateProps>((props, ref) => {
   const {theme} = useEffortlessTheme()
 
-  const {tag = 'div', cs, from, ...rest} = props
+  const {cs, from, tag = 'div', variant, ...rest} = props
   const Component = tag
 
   const themeTag = tag as keyof JSX.IntrinsicElements
   const styles: CSObject[] = [
-    ...(from && theme?.variants?.[from]?.[themeTag] ? [transformCSProperty(theme.variants[from]?.[themeTag])] : []),
+    ...(from && theme?.tags?.[from]?.[themeTag] ? [transformCSProperty(theme.tags[from]?.[themeTag])] : []),
+    ...(from && variant && theme?.variants?.[from]?.[variant] ? [transformCSProperty(theme.variants[from]?.[variant])] : []),
     ...(cs ? [transformCSProperty(cs)] : []),
   ]
   const allProps = {

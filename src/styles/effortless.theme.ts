@@ -7,11 +7,18 @@ export const effortlessTheme: TEffortlessTheme = {
     x: 16,
     y: 16,
   },
-  variants: {
+  tags: {
     Text: {
       p: {
         m: 0,
         fontSize: theme.font.size.base,
+      },
+    },
+  },
+  variants: {
+    Text: {
+      'main-header': {
+        fontSize: 40,
       },
     },
   },

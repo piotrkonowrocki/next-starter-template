@@ -47,7 +47,7 @@ export const DemoContent: FC = () => {
         <Box tag="li">2</Box>
         <Box tag="li">3</Box>
       </Box>
-      <Text>Text component</Text>
+      <Text variant="main-header">Text component</Text>
       <p>
         Get started by editing <code>/pages/index.tsx</code>
       </p>

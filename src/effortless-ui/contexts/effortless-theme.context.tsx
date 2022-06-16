@@ -7,9 +7,14 @@ export interface TEffortlessTheme {
     x?: number
     y?: number
   }
-  variants?: {
+  tags?: {
     [k in EffortlessThemeComponentsTypes]?: {
       [i in keyof JSX.IntrinsicElements]?: CSObject
+    }
+  }
+  variants?: {
+    [k in EffortlessThemeComponentsTypes]?: {
+      [i: string]: CSObject
     }
   }
 }
