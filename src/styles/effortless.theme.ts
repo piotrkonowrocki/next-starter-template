@@ -16,6 +16,12 @@ export const effortlessTheme: TEffortlessTheme = {
     },
   },
   variants: {
+    Button: {
+      primary: {
+        border: 'none',
+        p: 0,
+      },
+    },
     Text: {
       'main-header': {
         fontSize: 40,

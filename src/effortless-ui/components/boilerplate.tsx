@@ -12,9 +12,10 @@ interface IBoilerplateProps {
   variant?: string
 }
 
-export type TBoilerplateProps = Omit<Assign<ComponentPropsWithRef<'div'>, IBoilerplateProps>, 'ref'>
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type TBoilerplateProps<T extends ElementType> = Omit<Assign<ComponentPropsWithRef<T>, IBoilerplateProps>, 'ref'>
 
-export const Boilerplate = forwardRef<unknown, TBoilerplateProps>((props, ref) => {
+export const Boilerplate = forwardRef<unknown, IBoilerplateProps>((props, ref) => {
   const {theme} = useEffortlessTheme()
 
   const {cs, from, tag = 'div', variant, ...rest} = props

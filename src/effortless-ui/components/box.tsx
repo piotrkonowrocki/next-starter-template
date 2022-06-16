@@ -30,7 +30,7 @@ const compositions: ComponentCompositions<AllowedCompositions> = {
 }
 const compositionsWithGutter: AllowedCompositions[] = ['gridAutoCols', 'gridAutoRows']
 
-export const Box = forwardRef<unknown, TBoilerplateProps & IBoxProps>((props, ref) => {
+export const Box = forwardRef<unknown, TBoilerplateProps<'div'> & IBoxProps>((props, ref) => {
   const {theme} = useEffortlessTheme()
 
   const {composition, cs, ...rest} = props

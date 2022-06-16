@@ -3,7 +3,7 @@ import {CSSObject} from '@emotion/react'
 import Image from 'next/image'
 
 import nextJsLogo from '@/assets/nextjs-logo.svg'
-import {Box, Text} from '@/effortless-ui/components'
+import {Box, Button, Text} from '@/effortless-ui/components'
 import {mediaQuery, theme} from '@/styles/theme'
 import {rgba} from '@/utils/rgba'
 
@@ -47,6 +47,15 @@ export const DemoContent: FC = () => {
         <Box tag="li">2</Box>
         <Box tag="li">3</Box>
       </Box>
+      <Button
+        onClick={() => {
+          // alert('click')
+        }}
+        type="button"
+        variant="primary"
+      >
+        click me
+      </Button>
       <Text variant="main-header">Text component</Text>
       <p>
         Get started by editing <code>/pages/index.tsx</code>
