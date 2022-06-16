@@ -2,6 +2,7 @@ import React, {forwardRef} from 'react'
 
 import {useEffortlessTheme} from '@/effortless-ui/hooks'
 import {ComponentCompositions, CSObject} from '@/effortless-ui/types'
+import {castToArray, getCompositionStyles} from '@/effortless-ui/utils'
 
 import {Boilerplate, TBoilerplateProps} from './boilerplate'
 
@@ -27,28 +28,25 @@ const compositions: ComponentCompositions<AllowedCompositions> = {
   flexSpaceBetween: {justifyContent: 'space-between'},
   list: {m: 0, p: 0, listStyle: 'none'},
 }
-const compositionsWithGutter: AllowedCompositions[] = ['gridAutoRows']
+const compositionsWithGutter: AllowedCompositions[] = ['gridAutoCols', 'gridAutoRows']
 
 export const Box = forwardRef<unknown, TBoilerplateProps & IBoxProps>((props, ref) => {
   const {theme} = useEffortlessTheme()
 
   const {composition, cs, ...rest} = props
 
-  const styles: CSObject[] = []
-
-  if (cs) styles.push(cs)
-  if (composition) {
-    const compositionArr = Array.isArray(composition) ? composition : [composition]
-
-    styles.push(compositionArr.map((item) => compositions[item]))
-
-    if (compositionArr.some((item) => compositionsWithGutter.includes(item))) {
-      styles.push({
-        columnGap: theme?.gutter?.x,
-        rowGap: theme?.gutter?.y,
-      })
-    }
-  }
+  const styles: CSObject[] = [
+    ...(composition ? [getCompositionStyles<AllowedCompositions>(composition, compositions)] : []),
+    ...(composition && castToArray<AllowedCompositions>(composition).some((item) => compositionsWithGutter.includes(item))
+      ? [
+          {
+            columnGap: theme?.gutter?.x,
+            rowGap: theme?.gutter?.y,
+          },
+        ]
+      : []),
+    ...(cs ? [cs] : []),
+  ]
 
   return <Boilerplate cs={styles} from="Box" ref={ref} {...rest} />
 })

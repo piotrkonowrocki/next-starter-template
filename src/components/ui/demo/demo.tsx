@@ -32,34 +32,17 @@ export const DemoContent: FC = () => {
     <div css={[containerStyles, {code: {padding: 2, backgroundColor: rgba(theme.color.primary, 0.15), borderRadius: 2}}]}>
       <Box
         ref={ref}
-        tag="footer"
-        composition="flex"
+        tag="ul"
         cs={[
           {
             bc: 'red',
           },
-          {
-            color: 'blue',
-          },
-          [
-            {
-              pt: 10,
-            },
-            {
-              pb: 10,
-            },
-          ],
           mediaQuery({
-            m: [100, null, 0],
+            p: [10, 0],
           }),
         ]}
-        onClick={() => {
-          // console.log(ref)
-        }}
+        composition={['gridAutoRows', 'list']}
       >
-        Box
-      </Box>
-      <Box tag="ul" composition="list">
         <Box tag="li">1</Box>
         <Box tag="li">2</Box>
         <Box tag="li">3</Box>
