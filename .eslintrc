@@ -14,11 +14,10 @@
     }
   },
   "ignorePatterns": ["*.js", ".jsx"],
-  "plugins": ["react", "react-hooks", "prettier", "simple-import-sort"],
+  "plugins": ["react", "prettier", "simple-import-sort"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "next/core-web-vitals"
   ],
@@ -192,9 +191,6 @@
     "react/jsx-fragments": [2, "syntax"],
     "react/jsx-no-useless-fragment": [2, {"allowExpressions": true}],
     "react/jsx-pascal-case": 2,
-
-    //* plugin:react-hooks */
-    "react-hooks/exhaustive-deps": 0,
 
     // plugin:@typescript-eslint */
     "@typescript-eslint/array-type": 2,

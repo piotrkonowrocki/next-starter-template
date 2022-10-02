@@ -61,8 +61,8 @@ npm run start
 
 ### Code style
 This template uses both [eslint](https://github.com/eslint/eslint) and [prettier](https://github.com/prettier/prettier) for subjective configuration code style validation.
-* [eslint](https://github.com/eslint/eslint) configuration is using `react`, `react-hooks`, `prettier` and `simple-import-sort` plugins,
-* [eslint](https://github.com/eslint/eslint) configuration is extending `eslint:recommended`, `plugin:react/recommended`, `plugin:react-hooks/recommended`, `plugin:@typescript-eslint/recommended`, `next/core-web-vitals`,
+* [eslint](https://github.com/eslint/eslint) configuration is using `react`, `prettier` and `simple-import-sort` plugins,
+* [eslint](https://github.com/eslint/eslint) configuration is extending `eslint:recommended`, `plugin:react/recommended`, `plugin:@typescript-eslint/recommended`, `next/core-web-vitals`,
 * [eslint](https://github.com/eslint/eslint) is using [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) plugin for auto sort imports,
 * all deviations from [prettier](https://github.com/prettier/prettier) are displayed as errors in [eslint](https://github.com/eslint/eslint).
 
