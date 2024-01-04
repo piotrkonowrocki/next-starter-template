@@ -2,10 +2,10 @@ import React from 'react'
 import {Global} from '@emotion/react'
 import {AppProps} from 'next/app'
 
-import {base} from '@/styles/base.style'
-import {text} from '@/styles/text.style'
+import {base} from '@/app/styles/base.style'
+import {text} from '@/app/styles/text.style'
 
-import '@/styles/vendors.scss'
+import '@/app/styles/vendors.scss'
 
 const App = ({Component, pageProps}: AppProps) => {
   return (

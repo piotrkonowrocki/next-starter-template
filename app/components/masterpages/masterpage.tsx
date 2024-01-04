@@ -2,7 +2,7 @@ import React, {FC, ReactNode} from 'react'
 import {CSSObject, Global} from '@emotion/react'
 import Head from 'next/head'
 
-import {siteName} from '@/dictionaries/site.dictionary'
+import {siteName} from '@/app/dictionaries/site.dictionary'
 
 import DefaultMasterpage from './default/default'
 import EmptyMasterpage from './empty/empty'

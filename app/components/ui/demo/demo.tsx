@@ -2,9 +2,9 @@ import React, {FC} from 'react'
 import {CSSObject} from '@emotion/react'
 import Image from 'next/image'
 
-import nextJsLogo from '@/assets/nextjs-logo.svg'
-import {theme} from '@/styles/theme'
-import {rgba} from '@/utils/rgba'
+import nextJsLogo from '@/app/assets/nextjs-logo.svg'
+import {theme} from '@/app/styles/theme'
+import {rgba} from '@/app/utils/rgba'
 
 const containerStyles: CSSObject = {
   maxWidth: 640,
@@ -30,7 +30,7 @@ export const DemoContent: FC = () => (
       Get started by editing <code>/pages/index.tsx</code>
     </p>
     <p>
-      Start developing your own website with deleting files associated with demo component in <code>/src/components/ui/demo/</code>{' '}
+      Start developing your own website with deleting files associated with demo component in <code>/app/components/ui/demo/</code>{' '}
       directory.
     </p>
     <p>
