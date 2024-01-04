@@ -1,12 +1,12 @@
-.next
-node_modules
-public
 .eslintrc
 .gitignore
+.next
 .prettierrc
 .stylelintrc
-README.md
-package.json
+node_modules
 package-lock.json
+package.json
+public
+README.md
 tsconfig.json
 yarn.lock

@@ -2,8 +2,7 @@ import React from 'react'
 import {Global} from '@emotion/react'
 import {AppProps} from 'next/app'
 
-import {base} from '@/app/styles/base.style'
-import {text} from '@/app/styles/text.style'
+import {base, text} from '@/app/styles'
 
 import '@/app/styles/vendors.scss'
 

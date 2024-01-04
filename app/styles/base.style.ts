@@ -1,6 +1,6 @@
 import {CSSObject} from '@emotion/react'
 
-import {rgba} from '@/app/utils/rgba'
+import {rgba} from '@/app/utils'
 
 import {theme} from './theme'
 
