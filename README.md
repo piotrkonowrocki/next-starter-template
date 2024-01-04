@@ -11,7 +11,7 @@ A personal [Next.js](https://nextjs.org/) preconfigured starter template that co
     * [Masterpages](#masterpages)
 
 ## System Requirements
-* Node.js 12.22.0 or later
+* Node.js 18.17.0 or later
 
 ## Features
 This starter template comes with preinstalled and ready to use features:
@@ -19,8 +19,7 @@ This starter template comes with preinstalled and ready to use features:
 * [Emotion](https://github.com/emotion-js/emotion) as default method of styling,
 * [sanitize.css](https://github.com/csstools/sanitize.css) for basic styles normalization,
 * [facepaint](https://github.com/emotion-js/facepaint) for handling media queries,
-* Both [eslint](https://github.com/eslint/eslint) and [prettier](https://github.com/prettier/prettier) for code quality,
-* [Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases) with `@/` as prefix for all `/src` based files.
+* Both [eslint](https://github.com/eslint/eslint) and [prettier](https://github.com/prettier/prettier) for code quality.
 
 ## Installation
 To get started, use the following command:
@@ -67,27 +66,25 @@ This template uses both [eslint](https://github.com/eslint/eslint) and [prettier
 * all deviations from [prettier](https://github.com/prettier/prettier) are displayed as errors in [eslint](https://github.com/eslint/eslint).
 
 ### Styling
-This template uses [Emotion](https://github.com/emotion-js/emotion) as styling library. All global styles are stored in [`styles`](src/styles/) directory and can be included in application via [`_app.tsx`](pages/_app.tsx) file.
+This template uses [Emotion](https://github.com/emotion-js/emotion) as styling library. All global styles are stored in [`styles`](app/styles/) directory and can be included in application via [`_app.tsx`](pages/_app.tsx) file.
 
 ### File structure and naming conventions
 This template comes with basic folders structure and naming intention that can be changed and adjusted to your needs.
 
-In imports, alias `@/` is used to reach `src/` directory. This allows to easly distinguish internal packages from npm and also is important for import sorting.
-
 Starting structure includes:
 ```
-┌── pages
-├── public
-└── src
-    ├── assets
-    ├── components
-    │   ├── layout
-    │   ├── masterpage
-    │   └── ui
-    ├── dictionaries
-    ├── styles
-    ├── types
-    └── utils
+┌── app
+│   ├── assets
+│   ├── components
+│   │   ├── layout
+│   │   ├── masterpage
+│   │   └── ui
+│   ├── dictionaries
+│   ├── styles
+│   ├── types
+│   └── utils
+├── pages
+└── public
 ```
 This is just a base structure, during your development you will need to add more top level directories like `api`, `contexts` or `hooks`.
 
@@ -95,8 +92,8 @@ Top level directories should be used only to store files used in between more th
 
 All files names except `components` should be suffixed with file purpose before file extension.
 
-E.g.: see [`dictionaries/site.dictionary.ts`](src/dictionaries/site.dictionary.ts)
+E.g.: see [`dictionaries/site.dictionary.ts`](app/dictionaries/site.dictionary.ts)
 ### Masterpages
 This template uses extended [Layout](https://nextjs.org/docs/basic-features/layouts) feature from [Next.js](https://nextjs.org/).
 
-To create new layout, create new directory inside [`/src/components/masterpages/`](/src/components/masterpages/) with new masterpage and include it into [`/src/components/masterpages/masterpage.tsx`](/src/components/masterpages/masterpage.tsx) as new type of template.
+To create new layout, create new directory inside [`/app/components/masterpages/`](/app/components/masterpages/) with new masterpage and include it into [`/app/components/masterpages/masterpage.tsx`](/app/components/masterpages/masterpage.tsx) as new type of template.
