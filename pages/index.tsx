@@ -6,7 +6,7 @@ import {DemoContent} from '@/app/components/ui/demo'
 
 const Home: NextPage = () => {
   return (
-    <MasterPage subtitle={['asdz', 'zxc']}>
+    <MasterPage>
       <DemoContent />
     </MasterPage>
   )
