@@ -1,5 +1,6 @@
 import {CSSObject} from '@emotion/react'
 
+// eslint-disable-next-line no-relative-import-paths/no-relative-import-paths
 import {theme} from './theme'
 
 export const text: CSSObject = {

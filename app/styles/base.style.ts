@@ -2,6 +2,7 @@ import {CSSObject} from '@emotion/react'
 
 import {rgba} from '@/app/utils'
 
+// eslint-disable-next-line no-relative-import-paths/no-relative-import-paths
 import {theme} from './theme'
 
 export const base: CSSObject = {
